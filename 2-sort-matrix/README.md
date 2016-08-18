@@ -39,6 +39,7 @@
     import numpy as np        # numpy を np として読み込む
     ```
 4. Numpyを読み込み、x + y * z を計算せよ。
+
     ```
     x = [[2.0, 4.2],
          [3.3, 5.7]]
