@@ -32,7 +32,7 @@
 3. 行列演算ライブラリNumpyを読み込み、3x3の単位行列を作れ。
 
     ```
-	# pip install numpy        numpyをインストール
+	# pip3 install numpy        numpyをインストール
     ```
 
     ```
