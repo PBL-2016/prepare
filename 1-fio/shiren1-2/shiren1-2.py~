@@ -1,0 +1,23 @@
+#1〜30までのFizzBuzzの結果をファイルに書き込むプログラム
+
+if __name__ == "__main__":
+
+    f = open("shiren1-2.txt", "w", encoding="utf-8")
+
+    for counter in range(1,31):
+        if counter % 15 == 0:
+            hoge = str(counter) + " FizzBuzz\n"
+            f.write(hoge)
+            continue
+        elif counter % 5 == 0:
+            hoge = str(counter) + " Buzz\n"
+            f.write(hoge)
+            continue
+        elif counter % 3 == 0:
+            hoge = str(counter) + " Fizz\n"
+            f.write(hoge)
+            continue
+        hoge = str(counter) + "\n"
+        f.write(hoge)
+
+    f.close()
