@@ -1,0 +1,15 @@
+#sample.datを読み込んでoutput.datに書き込むプログラム
+
+if __name__ == "__main__":
+
+    f = open("sample.dat", "r")
+    f = open("output.dat", "w")
+
+    line = f.read()
+
+    while line:
+        hoge = str(line)
+        f.write(hoge)
+        line = f.read()
+
+    f.close()
