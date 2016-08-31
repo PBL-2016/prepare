@@ -1,6 +1,7 @@
 
 # クイックソート
 
+
 def quicksort(alist):
     # リストの要素が空ならそれを返す
     if len(alist) < 1:
