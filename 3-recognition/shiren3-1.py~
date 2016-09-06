@@ -1,0 +1,9 @@
+import numpy as np
+import cv2
+
+#画像の読み込み
+img = imread('rem2.png', 0)
+
+cv2.imshow('remrin', img)
+cv2.waitkey(0)
+cv2.destroyAllWindows()
