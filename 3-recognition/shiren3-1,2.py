@@ -20,5 +20,8 @@ cv2.imshow('グレースケール', gray)
 cv2.imshow('ガウシアンフィルタによる平滑化', gausBl)
 cv2.imshow('Canny法によるエッジ抽出', canny)
 
+#画像保存
+cv2.imwrite('remrem.png', rem)
+
 cv2.waitKey(0)
 cv2.destroyAllWindows()
