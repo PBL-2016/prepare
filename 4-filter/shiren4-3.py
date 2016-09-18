@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 
-#filter2Dの手実装(ラプラシアンフィルタ)
+#filter2Dの手実装(ガウシアンフィルタ)
 
 import numpy as np
 import cv2
