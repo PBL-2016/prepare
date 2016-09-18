@@ -6,14 +6,13 @@ import numpy as np
 import cv2
 
 kernel = np.array([
-    [ 0,  0, -1,  0,  0],
-    [ 0, -1, -2, -1,  0],
-    [-1, -2, 17, -2, -1],
-    [ 0, -1, -2, -1,  0],
-    [ 0,  0, -1,  0,  0]], np.float32)
+    [ 1,  4,  6,  4,  1],
+    [ 4, 16, 24, 16,  4],
+    [ 6, 24, 36, 24,  6],
+    [ 4, 16, 24, 16,  4],
+    [ 1,  4,  6,  4,  1]], np.float32) / 256
 
-if __name__ == '__main__':
-    img = cv2.imread('lenna.jpg')
+def convolution(img, kernel):
 
     kernel_h, kernel_w = kernel.shape
     img_h, img_w, depth = img.shape
@@ -34,9 +33,15 @@ if __name__ == '__main__':
                         
                 result[y][x] = sum(tmp)
 
-    cv2.imshow('befer', img)
-    cv2.imshow('after', result)
+    return result
+
+if __name__ == '__main__':
+    before_img = cv2.imread('lenna.jpg')
+
+    after_img = convolution(before_img, kernel).astype(np.uint8)
+
+    cv2.imshow('before', before_img)
+    cv2.imshow('after', after_img)
 
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-
